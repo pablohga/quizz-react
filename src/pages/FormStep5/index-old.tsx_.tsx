@@ -103,6 +103,33 @@ export const FormStep5 = () => {
               data={questions[currentIndex]}
             />
             <hr />
+            {/* <br />
+        <label>
+          Pergunta 1!
+          {perguntas.map((pergunta, key) => {
+            return (
+              <div>
+                <h2>
+                  {' '}
+                  <strong>{pergunta.question}</strong>
+                </h2>{' '}
+                - Categoria: {pergunta.category}
+                <p>
+                  <hr />
+                  {pergunta.incorrects?.map((incorrect: any) => (
+                    <div>
+                      {console.log(
+                        'incorrect.correct_answer',
+                        incorrect.correct_answer
+                      )}
+                      <p>{incorrect.correct_answer}</p>
+                    </div>
+                  ))}
+                </p>
+              </div>
+            );
+          })}
+        </label> */}
           </>
         )}
 
