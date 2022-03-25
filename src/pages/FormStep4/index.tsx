@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Theme } from '../../components/Theme';
 import { useForm, FormActions } from '../../contexts/FormContext';
 
@@ -12,17 +12,21 @@ export const FormStep4 = () => {
   const { state, dispatch } = useForm();
 
   useEffect(() => {
-    dispatch({
-      type: FormActions.setCurrentStep,
-      payload: 4
-    });
+    if (state.name === '') {
+      history.push('/');
+    } else {
+      dispatch({
+        type: FormActions.setCurrentStep,
+        payload: 4
+      });
+    }
   }, []);
 
   const handleNextStep = () => {
-    if (state.name !== '') {
+    if (state.email !== '' && state.github !== '') {
       history.push('/step5');
     } else {
-      alert('Precisa preencher seu nome antes de avançar');
+      alert('Precisa preencher as informações antes de avançar');
     }
   };
 
@@ -32,6 +36,8 @@ export const FormStep4 = () => {
       payload: e.target.value
     });
   };
+
+  console.log('teste perguntas: ', state.nQuizz);
 
   return (
     <Theme>

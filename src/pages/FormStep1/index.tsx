@@ -16,6 +16,7 @@ export const FormStep1 = () => {
       type: FormActions.setCurrentStep,
       payload: 1
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleNextStep = () => {
