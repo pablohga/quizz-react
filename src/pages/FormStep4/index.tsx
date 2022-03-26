@@ -72,7 +72,11 @@ export const FormStep4 = () => {
             justifyContent: 'flex-end'
           }}
         >
-          <Link to="https://github.com/pablohga" className="backButton">
+          <Link
+            to={{ pathname: 'https://github.com/pablohga' }}
+            target="_blank"
+            className="backButton"
+          >
             Feito por Pablo Azevedo
           </Link>
         </div>
