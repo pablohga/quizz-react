@@ -3,8 +3,8 @@ import * as C from './styles';
 export const Header = () => {
   return (
     <C.Container>
-      <h1>Cadastro do Desenvolvedor</h1>
-      <p>Faça seu Cadastro na lista e receba um emprego instataneamente</p>
+      <h1>Quizz WA Projectr</h1>
+      <p>Insira seus dados para realizar o Quizz WA Project</p>
     </C.Container>
   );
 };

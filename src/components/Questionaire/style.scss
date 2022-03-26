@@ -1,0 +1,34 @@
+.teste h1 {
+  color: rgb(158, 18, 18);
+}
+
+.next-question-container {
+  display: flex;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* flex-wrap: nowrap; */
+  justify-content: space-around;
+}
+
+.normal-button {
+  background-color: white;
+  width: 380px;
+  height: 80px;
+  padding: 8px;
+  margin: 24px;
+  color: orange;
+  font-weight: bolder;
+  font-size: larger;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  justify-content: center;
+}
+
+.green-button {
+  color: green !important;
+}
+
+.red-button {
+  color: red !important;
+}

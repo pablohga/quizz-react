@@ -7,6 +7,8 @@ import { useForm, FormActions } from '../../contexts/FormContext';
 
 import * as C from './styles';
 
+/* import './styles.css'; */
+
 export const FormStep5 = () => {
   const history = useHistory();
 
@@ -15,11 +17,11 @@ export const FormStep5 = () => {
 
   const { state, dispatch } = useForm();
   const API_URL = `https://opentdb.com/api.php?amount=${state.nQuizz}`;
-  const [perguntas, setPerguntas] = useState<any[]>([]);
-
+  /* const [perguntas, setPerguntas] = useState<any[]>([]); */
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [showAnswers, setShowAnswers] = useState(false);
 
   useEffect(() => {
     axios
@@ -35,30 +37,23 @@ export const FormStep5 = () => {
         }));
         setQuestions(questions);
       });
-    /* (function (response) {
-        //lidar com o sucesso da conexao
-        console.log('response: ', response.data.results);
-        const listaPerguntas = response.data.results;
-        const listaRespostasErradas = response.data.results.category[0];
-        const listaRespostasCerta = response.data.results.correct_answer;
-        console.log('listaRespostasErradas: ', listaRespostasErradas);
-        console.log('listaRespostasCerta: ', listaRespostasCerta);
 
-        setPerguntas(listaPerguntas);
-        /* console.log('Perguntas: ', setPerguntas); */
-    /* })
-      .catch(function (error) { */
-    //lidar com caso de erro
-    /* console.log(error); */
-    /* }); */
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAnswer = (answer: any) => {
-    if (answer === questions[currentIndex].correct_answer) {
-      setScore(score + 1);
+    if (!showAnswers) {
+      if (answer === questions[currentIndex].correct_answer) {
+        setScore(score + 1);
+      }
     }
+
+    setShowAnswers(true);
+  };
+
+  const handleNextQuestion = () => {
     setCurrentIndex(currentIndex + 1);
+    setShowAnswers(false);
   };
 
   useEffect(() => {
@@ -98,8 +93,11 @@ export const FormStep5 = () => {
             <p>Vamos começar?</p>
 
             <hr />
+
             <Questionaire
               handleAnswer={handleAnswer}
+              showAnswers={showAnswers}
+              handleNextQuestion={handleNextQuestion}
               data={questions[currentIndex]}
             />
             <hr />

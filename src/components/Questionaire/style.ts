@@ -1,42 +1,50 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ selected: boolean }>`
-  display: flex;
-  border: 2px solid ${(props) => (props.selected ? '#25CD89' : '#16195c')};
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 15px;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    border: 2px solid #496459;
+export const Container = styled.div`
+  p {
+    font-size: 13px;
+    color: #b8b8d4;
   }
-`;
 
-export const Icon = styled.div`
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #191a59;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-`;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+  }
 
-export const Info = styled.div`
-  flex: 1;
-  margin-left: 20px;
-`;
+  hr {
+    height: 1px;
+    border: 0;
+    background-color: #16195c;
+    margin: 30px 0;
+  }
+  label {
+    font-size: 13px;
 
-export const Title = styled.div`
-  font-size: 17px;
-  font-weight: bold;
-  margin-bottom: 7px;
-`;
+    input {
+      display: block;
+      margin-top: 7px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20px 10px;
+      border: 2px solid #25cd89;
+      border-radius: 10px;
+      color: #fff;
+      outline: 0;
+      font-size: 15px;
+      background-color: #02044a;
+    }
+  }
 
-export const Description = styled.div`
-  font-size: 14px;
-  color: #b8b8d4;
+  button {
+    background-color: #25cd89;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
 `;
