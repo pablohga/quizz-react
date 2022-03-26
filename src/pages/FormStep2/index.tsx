@@ -72,6 +72,17 @@ export const FormStep2 = () => {
           </Link>
           <button onClick={handleNextStep}>Proximo</button>
         </C.footerContent>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-end'
+          }}
+        >
+          <Link to="https://github.com/pablohga" className="backButton">
+            Feito por Pablo Azevedo
+          </Link>
+        </div>
       </C.Container>
     </Theme>
   );

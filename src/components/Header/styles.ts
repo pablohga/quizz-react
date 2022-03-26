@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import avatarjpg from '../../assets/avatar.jpg';
 
 export const Container = styled.div`
   padding: 25px 0;
   border-bottom: 1px solid #16195c;
+  display: flex;
+  justify-content: space-between;
 
   h1 {
     margin: 0;
@@ -13,4 +16,13 @@ export const Container = styled.div`
     font-size: 14px;
     color: #b8b8d4;
   }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+`;
+
+export const Avatar = styled.div<{ avatarjpg: string }>`
+  background: url(${avatarjpg});
 `;

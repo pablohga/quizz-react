@@ -21,6 +21,7 @@ export const FormStep5 = () => {
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [scoreFail, setScoreFail] = useState(0);
   const [showAnswers, setShowAnswers] = useState(false);
 
   useEffect(() => {
@@ -45,6 +46,8 @@ export const FormStep5 = () => {
     if (!showAnswers) {
       if (answer === questions[currentIndex].correct_answer) {
         setScore(score + 1);
+      } else {
+        setScoreFail(scoreFail + 1);
       }
     }
 
@@ -95,6 +98,13 @@ export const FormStep5 = () => {
             <p>Vamos começar?</p>
 
             <hr />
+            <div className="placar">
+              <h2>
+                Sua Pontuação: Acertos:{' '}
+                <span className="quizz-scrore-acertos">{score}</span> | Erros:{' '}
+                <span className="quizz-scrore-erros">{scoreFail}</span>
+              </h2>
+            </div>
             <h1>Pergunta:</h1>
             <Questionaire
               handleAnswer={handleAnswer}
@@ -107,10 +117,21 @@ export const FormStep5 = () => {
         )}
         <C.footerContent>
           <Link to="/step4" className="backButton">
-            Voltar
+            Cancelar
           </Link>
           <button onClick={handleNextStep}>Finalizar Quizz</button>
         </C.footerContent>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-end'
+          }}
+        >
+          <Link to="https://github.com/pablohga" className="backButton">
+            Feito por Pablo Azevedo
+          </Link>
+        </div>
       </C.Container>
     </Theme>
   ) : (
