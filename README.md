@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Quizz desenvolvido com ReactJS, Typescript, Axios Material UI e Styled Components
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
