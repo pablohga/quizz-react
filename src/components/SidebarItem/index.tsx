@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import * as C from './styles';
-import { ReactComponent as ProfileIcon } from '../../svgs/profile.svg';
-import { ReactComponent as BookIcon } from '../../svgs/book.svg';
-import { ReactComponent as MailIcon } from '../../svgs/mail.svg';
+import FaceIcon from '@mui/icons-material/Face';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 
 type Props = {
   title: string;
@@ -28,10 +29,20 @@ export const SiderbarItem = ({
         </C.Info>
         <C.IconArea active={active}>
           {icon === 'profile' && (
-            <ProfileIcon fill="white" width={24} height={24} />
+            <FaceIcon fill="white" width={40} height={40} />
           )}
-          {icon === 'book' && <BookIcon fill="white" width={24} height={24} />}
-          {icon === 'mail' && <MailIcon fill="white" width={24} height={24} />}
+          {icon === 'book' && (
+            <MenuBookIcon fill="white" width={24} height={24} />
+          )}
+          {icon === 'mail' && (
+            <MailOutlineIcon fill="white" width={24} height={24} />
+          )}
+          {icon === 'quizz1' && (
+            <QuestionAnswerIcon fill="white" width={24} height={24} />
+          )}
+          {icon === 'quizz2' && (
+            <QuestionAnswerIcon fill="white" width={24} height={24} />
+          )}
         </C.IconArea>
         <C.Point active={active}></C.Point>
       </Link>

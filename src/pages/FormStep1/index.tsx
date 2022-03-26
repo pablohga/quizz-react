@@ -52,8 +52,10 @@ export const FormStep1 = () => {
             onChange={handleNameChange}
           />
         </label>
-
-        <button onClick={handleNextStep}>Proximo</button>
+        <C.footerContent>
+          <span></span>
+          <button onClick={handleNextStep}>Proximo</button>
+        </C.footerContent>
       </C.Container>
     </Theme>
   );

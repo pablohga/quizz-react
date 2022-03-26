@@ -89,11 +89,13 @@ export const FormStep5 = () => {
           <>
             <p>Passo 5/5</p>
             <h1>Você escolheu responder {state.nQuizz} perguntas.</h1>
-            <h1>Está preparado, {state.name}? Aqui estão suas perguntas!</h1>
+            <h1>
+              Está preparado, {state.name}? <br /> Aqui estão suas perguntas!
+            </h1>
             <p>Vamos começar?</p>
 
             <hr />
-
+            <h1>Pergunta:</h1>
             <Questionaire
               handleAnswer={handleAnswer}
               showAnswers={showAnswers}
@@ -103,11 +105,12 @@ export const FormStep5 = () => {
             <hr />
           </>
         )}
-
-        <Link to="/step4" className="backButton">
-          Voltar
-        </Link>
-        <button onClick={handleNextStep}>Finalizar Quizz</button>
+        <C.footerContent>
+          <Link to="/step4" className="backButton">
+            Voltar
+          </Link>
+          <button onClick={handleNextStep}>Finalizar Quizz</button>
+        </C.footerContent>
       </C.Container>
     </Theme>
   ) : (

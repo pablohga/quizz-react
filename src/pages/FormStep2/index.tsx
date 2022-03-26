@@ -21,6 +21,7 @@ export const FormStep2 = () => {
         payload: 2
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleNextStep = () => {
@@ -65,11 +66,12 @@ export const FormStep2 = () => {
           selected={state.level === 1}
           onClick={() => setLevel(1)}
         />
-
-        <Link to="/" className="backButton">
-          Voltar
-        </Link>
-        <button onClick={handleNextStep}>Proximo</button>
+        <C.footerContent>
+          <Link to="/" className="backButton">
+            Voltar
+          </Link>
+          <button onClick={handleNextStep}>Proximo</button>
+        </C.footerContent>
       </C.Container>
     </Theme>
   );

@@ -39,18 +39,18 @@ export const Theme = ({ children }: Props) => {
               active={state.currentStep === 3}
             />
             <SiderbarItem
-              title="Quizz"
-              description="Teste seus conhecimentos"
-              icon="mail"
+              title="Quizz Passo 1"
+              description="Quantas perguntas deseja responder?"
+              icon="quizz1"
               path="/step4"
               active={state.currentStep === 4}
             />
             <SiderbarItem
-              title="Quizz"
-              description="Teste seus conhecimentos"
-              icon="mail"
+              title="Quizz Passo 2"
+              description="Hora do desafio! Vamos as perguntas!"
+              icon="quizz2"
               path="/step5"
-              active={state.currentStep === 4}
+              active={state.currentStep === 5}
             />
           </C.Siderbar>
           <C.Page>{children}</C.Page>

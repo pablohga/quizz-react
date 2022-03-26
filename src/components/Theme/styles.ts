@@ -29,3 +29,10 @@ export const Page = styled.div`
   padding-left: 40px;
   padding-top: 40px;
 `;
+
+export const footerContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+`;

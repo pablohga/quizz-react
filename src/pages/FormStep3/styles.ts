@@ -56,3 +56,9 @@ export const Container = styled.div`
     color: #b8b8d4;
   }
 `;
+export const footerContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+`;

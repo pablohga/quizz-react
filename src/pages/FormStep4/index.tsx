@@ -20,6 +20,7 @@ export const FormStep4 = () => {
         payload: 4
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleNextStep = () => {
@@ -47,20 +48,23 @@ export const FormStep4 = () => {
         <p>Quantas perguntas deseja responder?</p>
 
         <hr />
-
-        <label>
-          Quantidade de perguntas
-          <input
-            type="text"
-            autoFocus
-            value={state.nQuizz}
-            onChange={handleNumQuizz}
-          />
-        </label>
-        <Link to="/step3" className="backButton">
-          Voltar
-        </Link>
-        <button onClick={handleNextStep}>Proximo</button>
+        <C.quantContainer>
+          <label>
+            Quantidade de perguntas
+            <input
+              type="number"
+              autoFocus
+              value={state.nQuizz}
+              onChange={handleNumQuizz}
+            />
+          </label>
+        </C.quantContainer>
+        <C.footerContent>
+          <Link to="/step3" className="backButton">
+            Voltar
+          </Link>
+          <button onClick={handleNextStep}>Proximo</button>
+        </C.footerContent>
       </C.Container>
     </Theme>
   );

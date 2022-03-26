@@ -20,15 +20,8 @@ export const FormStep3 = () => {
         payload: 3
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  /*   const handleNextStep = () => {
-    if (state.email !== '' && state.github !== '') {
-      console.log(state);
-    } else {
-      alert('preencha os dados');
-    }
-  }; */
 
   const handleNextStep = () => {
     if (state.name !== '') {
@@ -74,16 +67,16 @@ export const FormStep3 = () => {
           Qual seu GitHub
           <input
             type="url"
-            autoFocus
             value={state.github}
             onChange={handleGithubChange}
           />
         </label>
-
-        <Link to="/step2" className="backButton">
-          Voltar
-        </Link>
-        <button onClick={handleNextStep}>Proximo</button>
+        <C.footerContent>
+          <Link to="/step2" className="backButton">
+            Voltar
+          </Link>
+          <button onClick={handleNextStep}>Proximo</button>
+        </C.footerContent>
       </C.Container>
     </Theme>
   );

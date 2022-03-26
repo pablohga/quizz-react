@@ -25,14 +25,18 @@ export const Container = styled.div`
       display: block;
       margin-top: 7px;
       box-sizing: border-box;
-      width: 100%;
+
       padding: 20px 10px;
       border: 2px solid #25cd89;
       border-radius: 10px;
       color: #fff;
       outline: 0;
-      font-size: 15px;
+
       background-color: #02044a;
+      width: 150px;
+      height: 150px;
+      font-size: 60px;
+      text-align: center;
     }
   }
 
@@ -47,4 +51,22 @@ export const Container = styled.div`
     cursor: pointer;
     margin-top: 30px;
   }
+  .backButton {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 20px 40px;
+    color: #b8b8d4;
+  }
+`;
+
+export const quantContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+export const footerContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
 `;

@@ -48,3 +48,9 @@ export const Container = styled.div`
     margin-top: 30px;
   }
 `;
+export const footerContent = styled.div`
+  display: flex;
+  justify-content: ;
+  text-align: center;
+  align-items: center;
+`;
