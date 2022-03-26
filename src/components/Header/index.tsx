@@ -10,7 +10,8 @@ export const Header = () => {
         <p>Insira seus dados para realizar o Quizz WA Project</p>
         <div>
           <Link
-            to="https://github.com/pablohga"
+            to={{ pathname: 'https://github.com/pablohga' }}
+            target="_blank"
             style={{
               display: 'flex',
               flexDirection: 'column',
