@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <>
       <C.Container>
-        <h1>Quizz WA Projectr</h1>
+        <h1>Quizz WA Project</h1>
         <p>Insira seus dados para realizar o Quizz WA Project</p>
         <div>
           <Link
