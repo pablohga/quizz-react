@@ -81,16 +81,45 @@ export const FormStep3 = () => {
           style={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            padding: '30px'
           }}
         >
-          <Link
+          <strong>
+            <Link
+              to={{ pathname: 'https://github.com/pablohga' }}
+              target="_blank"
+              className="backButton"
+            >
+              GITHUB
+            </Link>{' '}
+            &nbsp;|&nbsp;
+            <Link
+              to={{ pathname: 'mailto:pablohga@gmail.com' }}
+              target="_blank"
+              className="backButton"
+            >
+              PABLOHGA@GMAIL.COM
+            </Link>{' '}
+            &nbsp;|&nbsp;
+            <Link
+              to={{
+                pathname:
+                  'https://www.linkedin.com/in/pablo-herivelton-g-azevedo-2a321320/'
+              }}
+              target="_blank"
+              className="backButton"
+            >
+              LINKEDIN
+            </Link>
+          </strong>
+          {/* <Link
             to={{ pathname: 'https://github.com/pablohga' }}
             target="_blank"
             className="backButton"
           >
             Feito por Pablo Azevedo
-          </Link>
+          </Link> */}
         </div>
       </C.Container>
     </Theme>

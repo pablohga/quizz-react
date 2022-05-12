@@ -54,6 +54,7 @@ export const Container = styled.div`
     text-decoration: none;
     padding: 20px 40px;
     color: #b8b8d4;
+    padding: 30px;
   }
 `;
 export const footerContent = styled.div`

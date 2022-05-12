@@ -6,11 +6,22 @@ export const Header = () => {
   return (
     <>
       <C.Container>
-        <h1>Quizz WA Project</h1>
-        <p>Insira seus dados para realizar o Quizz WA Project</p>
-        <div>
+        <h1>
+          Quizz PHGA - ReactJS, <br /> Typescript, <br /> Styled Component
+        </h1>
+        <p>Insira seus dados para realizar o Quizz PHGA</p>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
           <Link
-            to={{ pathname: 'https://github.com/pablohga' }}
+            to={{
+              pathname:
+                'https://www.linkedin.com/in/pablo-herivelton-g-azevedo-2a321320/'
+            }}
             target="_blank"
             style={{
               display: 'flex',
@@ -19,8 +30,8 @@ export const Header = () => {
             }}
             className="backButton"
           >
-            <img src={avatar} alt="" />
-            Feito por Pablo Azevedo
+            <img style={{ textDecoration: 'none' }} src={avatar} alt="" />
+            <div>Desenvolvido</div> <div>por Pablo Azevedo</div>
           </Link>
         </div>
       </C.Container>

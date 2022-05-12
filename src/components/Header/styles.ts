@@ -21,6 +21,12 @@ export const Container = styled.div`
     height: 100px;
     border-radius: 50%;
   }
+  .backButton {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 20px 40px;
+    color: #b8b8d4;
+  }
 `;
 
 export const Avatar = styled.div<{ avatarjpg: string }>`
